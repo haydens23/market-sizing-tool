@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Market Sizing Tool</title>
+</head>
+<body>
+    <h1>Market Sizing Tool</h1>
+    <form method="post">
+        <!-- Add sliders or file uploads here later -->
+        <button type="submit">Run Market Sizing</button>
+    </form>
+    {% if results %}
+        <h2>Results</h2>
+        <p>TAM: {{ results.TAM }}</p>
+        <p>SAM: {{ results.SAM }}</p>
+        <p>SOM: {{ results.SOM }}</p>
+        <img src="{{ url_for('static', filename='images/forecast.png') }}" alt="Forecast Plot">
+    {% endif %}
+</body>
+</html>

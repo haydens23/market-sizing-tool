@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "market-sizing-tool"
+version = "0.1.0"
+description = "A Python tool for market sizing calculations"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Hayden Selvakumar" }
+]
+dependencies = [
+    "pandas>=1.5.0",
+    "numpy>=1.23.0",
+    "flask",
+    "matplotlib",
+    "python-dotenv",
+    "google-generativeai",
+    "tenacity>=8.0.0",
+    "ratelimit>=2.2.1"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/marketSizingTool"]
+
+[tool.hatch.build]
+packages = ["src/marketSizingTool"]
+exclude = [
+    "static/*",
+    "templates/*",
+    "sample_data/*",
+    "tests/*",
+    "venv/*",
+    ".venv/*",
+    "__pycache__/*",
+    "*.pyc"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"

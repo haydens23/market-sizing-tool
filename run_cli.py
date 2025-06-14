@@ -2,7 +2,7 @@ import argparse
 from marketSizingTool.data import load_csv, clean_data
 from marketSizingTool.sizing import calculate_tam, calculate_sam, calculate_som
 from marketSizingTool.forecasting import forecast_arima
-from marketSizingTool.charts import plot_market_history_and_forecast, save_plot
+from marketSizingTool.charts import plot_market_history_and_forecast
 
 def main():
     parser = argparse.ArgumentParser(description="Market Sizing CLI Tool")
@@ -20,7 +20,7 @@ def main():
     print(f"TAM: {tam}\nSAM: {sam}\nSOM: {som}")
     forecast = forecast_arima(df['Revenue'], periods=args.forecast)
     plot_market_history_and_forecast(df['Year'], df['Revenue'], forecast)
-    save_plot('cli_forecast.png')
+    ('cli_forecast.png')
     print("Forecast plot saved as cli_forecast.png")
 
 if __name__ == '__main__':

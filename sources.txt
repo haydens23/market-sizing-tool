@@ -1,0 +1,5 @@
+Sources and Acknowledgments:
+
+- Used for data handling and cleaning: https://pandas.pydata.org/docs/getting_started/intro_tutorials/
+- Flask integration and template rendering adapted from: https://flask.palletsprojects.com/en/2.3.x/quickstart/#rendering-templates
+- GPT-generated suggestions for market sizing prompts (ChatGPT-plus, 8 June 2025). "Provide a concise market summary based on business traits and trends."

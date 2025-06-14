@@ -1,5 +1,6 @@
-pandas
-numpy
-statsmodels
-matplotlib
 Flask
+pandas
+matplotlib
+gemini
+python-dotenv
+numpy
